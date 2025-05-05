@@ -1,3 +1,16 @@
+fauzan-arift: buat readme md nya dong
+
+📚 Informasi Proyek
+Nama Proyek: SAKLAR: Smart Automated Kinetics for Lighting & Air Regulation
+Kode Tim: UNI038
+Nama Tim: INNOV8 - IPB University
+Adhiya Radhin Fasya
+Fauzan Arif Tricahya
+Wandy Chandra Wijaya
+Yasir
+
+Workspace: Collecting workspace information# SAKLAR: Smart Automated Kinetics for Lighting & Air Regulation
+
 ## 📋 Project Overview
 SAKLAR is an intelligent IoT system that automates lighting and air conditioning control based on human presence detection and environmental conditions. The system uses computer vision, IoT connectivity, and AI to create an efficient and responsive smart space solution.
 
