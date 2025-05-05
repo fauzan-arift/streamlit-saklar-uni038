@@ -7,27 +7,24 @@ import numpy as np
 import paho.mqtt.client as mqtt
 from ultralytics import YOLO
 import google.generativeai as genai  
-import toml
 import datetime 
 import socket 
 
 # === Konfigurasi Ubidots ===
-secrets = toml.load("secrets.toml")
+UBIDOTS_TOKEN = st.secrets["UBIDOTS_TOKEN"]
+DEVICE_LABEL = st.secrets["DEVICE_LABEL"]
+VARIABLE_CAMERA = st.secrets["VARIABLE_CAMERA"]
+VARIABLE_LIGHT = st.secrets["VARIABLE_LIGHT"]
+VARIABLE_COUNT = st.secrets["VARIABLE_COUNT"]
+VARIABLE_AC = st.secrets["VARIABLE_AC"]
+VARIABLE_TEMPERATURE = st.secrets["VARIABLE_TEMPERATURE"]
+VARIABLE_DHT11 = st.secrets["VARIABLE_DHT11"]
 
-UBIDOTS_TOKEN = secrets["UBIDOTS_TOKEN"]
-DEVICE_LABEL = secrets["DEVICE_LABEL"]
-VARIABLE_CAMERA = secrets["VARIABLE_CAMERA"]
-VARIABLE_LIGHT = secrets["VARIABLE_LIGHT"]
-VARIABLE_COUNT = secrets["VARIABLE_COUNT"]
-VARIABLE_AC = secrets["VARIABLE_AC"]
-VARIABLE_TEMPERATURE = secrets["VARIABLE_TEMPERATURE"]
-VARIABLE_DHT11 = secrets["VARIABLE_DHT11"]
-BROKER = secrets["BROKER"]
-PORT = int(secrets["PORT"])
+BROKER = st.secrets["BROKER"]
+PORT = int(st.secrets["PORT"])
 
-# Gemini
-GEMINI_API_KEY = secrets["GEMINI_API_KEY"]
-import google.generativeai as genai
+# === Gemini API Configuration ===
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 
 # === Init State ===
